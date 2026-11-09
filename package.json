@@ -1,0 +1,29 @@
+{
+  "name": "deepseek-harness-dsh",
+  "version": "0.1.0",
+  "description": "Approval-gated DeepSeek software delivery harness for GitHub issues",
+  "type": "module",
+  "bin": {
+    "dsh": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "dev": "tsx src/index.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.0",
+    "fast-glob": "^3.3.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.8"
+  }
+}
